@@ -399,6 +399,7 @@ function getK8sCloudMetadata(callback) {
             if (metaData.spec.providerID) {
                 var provider = metaData.spec.providerID;
                 cloudName = String(provider.split(":", 1)); // Split on providerID if request was successful
+                cloudName = "Aruba"
             }
 
             // use the annotation  to identify the zone if available
