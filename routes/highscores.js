@@ -16,6 +16,8 @@ router.get('/list', urlencodedParser, function(req, res, next) {
     console.log('[GET /highscores/list]');
     Database.getDb(req.app, function(err, db) {
         if (err) {
+            console.log("CiaoGet1");
+            console.log(err);
             return next(err);
         }
 
@@ -32,6 +34,8 @@ router.get('/list', urlencodedParser, function(req, res, next) {
                               zone: item['zone'], host: item['host'],
                               score: item['score'] });
             });
+
+            console.log(res.json(result));
 
             res.json(result);
         });
@@ -50,6 +54,8 @@ router.post('/', urlencodedParser, function(req, res, next) {
 
     Database.getDb(req.app, function(err, db) {
         if (err) {
+            console.log("CiaoGet");
+            console.log(err);
             return next(err);
         }
 
