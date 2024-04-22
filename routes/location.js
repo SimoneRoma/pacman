@@ -177,7 +177,7 @@ function getAWSCloudMetadata(callback) {
 
         zoneRes.on('end', () => {
             console.log('No more data in response.');
-            cloudName = 'AWS'; // Request was successful
+            cloudName = 'Aruba'; // Request was successful
 
             // get the zone substring in uppercase
             var zoneSplit = zone.split('/');
